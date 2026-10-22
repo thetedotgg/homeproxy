@@ -1,0 +1,11 @@
+# Default gitleaks rules plus the test fixtures that are known not to be secrets.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Test-only fixtures"
+regexes = [
+  '''0123456789abcdef''',          # fixed proxy password used by unit tests
+  '''fixture-only-password''',
+  '''dGhlIHNhbXBsZSBub25jZQ==''',  # RFC 6455 sample Sec-WebSocket-Key
+]

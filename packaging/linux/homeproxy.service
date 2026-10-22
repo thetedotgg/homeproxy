@@ -1,0 +1,38 @@
+[Unit]
+Description=HomeProxy local proxy service
+Documentation=file:/usr/share/doc/homeproxy/ubuntu-server.md
+After=network.target
+
+[Service]
+Type=simple
+User=homeproxy
+Group=homeproxy-admin
+ExecStart=/usr/bin/homeproxyd --shared-socket
+Restart=on-failure
+RestartSec=3s
+TimeoutStartSec=30s
+TimeoutStopSec=30s
+RuntimeDirectory=homeproxy
+RuntimeDirectoryMode=0750
+StateDirectory=homeproxy
+StateDirectoryMode=0700
+CacheDirectory=homeproxy
+CacheDirectoryMode=0700
+UMask=0077
+LimitNOFILE=8192
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+AmbientCapabilities=
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+LockPersonality=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+
+[Install]
+WantedBy=multi-user.target

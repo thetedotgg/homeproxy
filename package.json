@@ -1,0 +1,27 @@
+{
+  "name": "klidna-sit",
+  "private": true,
+  "version": "1.3.0",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "repository": "github:thetedotgg/homeproxy",
+  "homepage": "https://homeproxy.thetasigma.io",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "check": "tsc --noEmit",
+    "test": "tsc src/setup.ts src/i18n.ts src/snapshot.ts src/service-ports.ts src/cache-controls.ts src/offline-controls.ts src/offline-preparation.ts src/device-setup.ts src/profile-controls.ts src/diagnostics.ts src/about.ts --noEmit false --outDir target/ui-tests --target ES2022 --module ES2022 --moduleResolution bundler --skipLibCheck && node --test src/*.test.mjs",
+    "release:windows": "bash scripts/release-windows.sh",
+    "release:windows:unsigned": "bash scripts/release-windows-unsigned.sh",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.12.0",
+    "qrcode-generator": "2.0.4"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.5"
+  }
+}

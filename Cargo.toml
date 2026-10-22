@@ -1,0 +1,18 @@
+[workspace]
+members = ["crates/homeproxy-core", "crates/homeproxy-control", "crates/homeproxy-service", "crates/homeproxy-cli", "src-tauri"]
+default-members = ["crates/homeproxy-service", "crates/homeproxy-cli"]
+resolver = "2"
+
+[workspace.package]
+version = "1.3.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/thetedotgg/homeproxy"
+homepage = "https://homeproxy.thetasigma.io"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true

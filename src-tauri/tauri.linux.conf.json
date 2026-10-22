@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Homeproxy Desktop",
+  "app": {
+    "enableGTKAppId": true
+  },
+  "bundle": {
+    "targets": [
+      "deb"
+    ],
+    "category": "Utility",
+    "shortDescription": "Klidn\u00e1 dom\u00e1c\u00ed proxy pro Ubuntu / Calm home proxy for Ubuntu",
+    "longDescription": "Desktop client for the HomeProxy system service on Ubuntu: status, traffic, device policies and LAN settings for the local HTTP and SOCKS5 proxy. The service keeps running when this window is closed. Eligible public HTTP responses and explicitly allowed HTTPS sites can be cached for offline use. HTTPS inspection requires preparing the HomeProxy certificate authority and trusting its public certificate on each client; incompatible apps and excluded sites use a tunnel.",
+    "linux": {
+      "deb": {
+        "desktopTemplate": "linux/homeproxy.desktop",
+        "depends": [
+          "homeproxy (= 1.3.0)"
+        ]
+      }
+    }
+  }
+}

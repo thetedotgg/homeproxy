@@ -1,0 +1,11 @@
+target/
+node_modules/
+dist/
+src-tauri/gen/
+.DS_Store
+*.log
+.env
+.env.*
+/.agents/ts-backups/
+/.agents/ts-delegations/
+/scripts/__pycache__/

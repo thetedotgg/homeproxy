@@ -1,0 +1,12 @@
+*
+!Dockerfile
+!nginx/
+!nginx/*.conf
+!package.json
+!site.json
+!scripts/build.mjs
+!scripts/lib/
+!scripts/lib/*.mjs
+!src/
+!src/**
+src/screens/*.png

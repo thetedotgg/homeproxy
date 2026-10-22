@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    remove|deconfigure)
+        if command -v deb-systemd-invoke >/dev/null 2>&1; then
+            deb-systemd-invoke stop homeproxy.service || true
+        fi
+        ;;
+esac
+
+exit 0

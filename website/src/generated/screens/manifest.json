@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "widths": [
+    640,
+    1180,
+    1760
+  ],
+  "items": {
+    "cs-home": {
+      "sha256": "5897cd1f5214aebc73deec9775bea6fa9a9f37f09827803d8901674f5492fd9d",
+      "width": 2360,
+      "height": 1520,
+      "placeholder": false,
+      "files": {
+        "avif": {
+          "640": "cs-home-640.avif",
+          "1180": "cs-home-1180.avif",
+          "1760": "cs-home-1760.avif"
+        },
+        "webp": {
+          "640": "cs-home-640.webp",
+          "1180": "cs-home-1180.webp",
+          "1760": "cs-home-1760.webp"
+        }
+      }
+    },
+    "cs-devices": {
+      "sha256": "af4fc08e1d96fbadca1244c74af2a8be2c4e6ffb6a9f31b492614265ece5f15e",
+      "width": 2360,
+      "height": 1520,
+      "placeholder": false,
+      "files": {
+        "avif": {
+          "640": "cs-devices-640.avif",
+          "1180": "cs-devices-1180.avif",
+          "1760": "cs-devices-1760.avif"
+        },
+        "webp": {
+          "640": "cs-devices-640.webp",
+          "1180": "cs-devices-1180.webp",
+          "1760": "cs-devices-1760.webp"
+        }
+      }
+    },
+    "cs-guide": {
+      "sha256": "137e28846645d54e6358d51e8279aaf7c7da6e26a68e94c68d3333888eecc0cd",
+      "width": 2360,
+      "height": 1520,
+      "placeholder": false,
+      "files": {
+        "avif": {
+          "640": "cs-guide-640.avif",
+          "1180": "cs-guide-1180.avif",
+          "1760": "cs-guide-1760.avif"
+        },
+        "webp": {
+          "640": "cs-guide-640.webp",
+          "1180": "cs-guide-1180.webp",
+          "1760": "cs-guide-1760.webp"
+        }
+      }
+    },
+    "cs-settings": {
+      "sha256": "820da485850244a1ff779f04888f1829d41bddcd1c60901d0ecdb0d8b4f8d51e",
+      "width": 2360,
+      "height": 1520,
+      "placeholder": false,
+      "files": {
+        "avif": {
+          "640": "cs-settings-640.avif",
+          "1180": "cs-settings-1180.avif",
+          "1760": "cs-settings-1760.avif"
+        },
+        "webp": {
+          "640": "cs-settings-640.webp",
+          "1180": "cs-settings-1180.webp",
+          "1760": "cs-settings-1760.webp"
+        }
+      }
+    },
+    "en-home": {
+      "sha256": "8829f775ee5d4d5c1d11719ffb2233bec4cc5dcace31d3ee17c34e560b5f4796",
+      "width": 2360,
+      "height": 1520,
+      "placeholder": false,
+      "files": {
+        "avif": {
+          "640": "en-home-640.avif",
+          "1180": "en-home-1180.avif",
+          "1760": "en-home-1760.avif"
+        },
+        "webp": {
+          "640": "en-home-640.webp",
+          "1180": "en-home-1180.webp",
+          "1760": "en-home-1760.webp"
+        }
+      }
+    },
+    "en-devices": {
+      "sha256": "dd613933b06be4f650631f9518a4ba029165021e2b3c2ed55c728ce190b34ada",
+      "width": 2360,
+      "height": 1520,
+      "placeholder": false,
+      "files": {
+        "avif": {
+          "640": "en-devices-640.avif",
+          "1180": "en-devices-1180.avif",
+          "1760": "en-devices-1760.avif"
+        },
+        "webp": {
+          "640": "en-devices-640.webp",
+          "1180": "en-devices-1180.webp",
+          "1760": "en-devices-1760.webp"
+        }
+      }
+    },
+    "en-guide": {
+      "sha256": "8d78726fa225ae43f502c8a1c4976eef853f9721c7a91aefc44d240a2b6072a8",
+      "width": 2360,
+      "height": 1520,
+      "placeholder": false,
+      "files": {
+        "avif": {
+          "640": "en-guide-640.avif",
+          "1180": "en-guide-1180.avif",
+          "1760": "en-guide-1760.avif"
+        },
+        "webp": {
+          "640": "en-guide-640.webp",
+          "1180": "en-guide-1180.webp",
+          "1760": "en-guide-1760.webp"
+        }
+      }
+    },
+    "en-settings": {
+      "sha256": "54ce5a0142c2323eab86746239bea086d99594eb3cd3fe5ca8293be7f3368a51",
+      "width": 2360,
+      "height": 1520,
+      "placeholder": false,
+      "files": {
+        "avif": {
+          "640": "en-settings-640.avif",
+          "1180": "en-settings-1180.avif",
+          "1760": "en-settings-1760.avif"
+        },
+        "webp": {
+          "640": "en-settings-640.webp",
+          "1180": "en-settings-1180.webp",
+          "1760": "en-settings-1760.webp"
+        }
+      }
+    }
+  }
+}

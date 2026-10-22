@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=HomeProxy
+Comment={{comment}}
+Exec={{exec}}
+Icon={{icon}}
+Terminal=false
+Categories={{categories}}
+StartupNotify=true
+StartupWMClass=cz.klidnasit.desktop

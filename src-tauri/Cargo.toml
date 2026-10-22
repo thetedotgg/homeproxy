@@ -1,0 +1,33 @@
+[package]
+name = "klidna-sit"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+default-run = "klidna-sit"
+
+[lib]
+name = "klidna_sit_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.7.0", features = [] }
+
+[features]
+isolated-test = ["homeproxy-core/isolated-test"]
+
+[dependencies]
+homeproxy-core = { path = "../crates/homeproxy-core" }
+homeproxy-control = { path = "../crates/homeproxy-control" }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+tauri = { version = "2.12.0", features = ["tray-icon"] }
+tauri-plugin-single-instance = "2.4.3"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+gtk = "0.18.2"
+libc = "0.2.189"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61.2", features = ["Win32_Storage_FileSystem"] }

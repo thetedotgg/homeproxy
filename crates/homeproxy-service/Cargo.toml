@@ -1,0 +1,22 @@
+[package]
+name = "homeproxy-service"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[[bin]]
+name = "homeproxyd"
+path = "src/main.rs"
+
+[dependencies]
+homeproxy-core = { path = "../homeproxy-core" }
+homeproxy-control = { path = "../homeproxy-control" }
+clap = { version = "=4.6.6", features = ["derive", "env"] }
+serde_json = "1.0.151"
+tokio = { version = "1.53.1", features = ["macros", "net", "rt-multi-thread", "signal", "sync", "time"] }
+libc = "0.2.189"
+
+[dev-dependencies]
+tempfile = "3.27.0"

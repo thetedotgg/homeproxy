@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability / Bezpečnostní chyba
+    url: https://github.com/thetedotgg/homeproxy/security/advisories/new
+    about: Report privately. / Nahlaste neveřejně.

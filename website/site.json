@@ -1,0 +1,37 @@
+{
+  "siteUrl": "https://homeproxy.thetasigma.io",
+  "locales": ["cs", "en"],
+  "defaultLocale": "en",
+  "repo": "https://github.com/thetedotgg/homeproxy",
+  "releases": "https://github.com/thetedotgg/homeproxy/releases/latest",
+  "issues": "https://github.com/thetedotgg/homeproxy/issues",
+  "downloads": {
+    "windows": {
+      "url": "https://github.com/thetedotgg/homeproxy/releases/latest/download/HomeProxy-Setup-x64.exe",
+      "file": "HomeProxy-Setup-x64.exe"
+    },
+    "ubuntu": {
+      "url": "https://github.com/thetedotgg/homeproxy/releases/latest/download/HomeProxy-Ubuntu-amd64.tar.gz",
+      "file": "HomeProxy-Ubuntu-amd64.tar.gz"
+    }
+  },
+  "author": { "name": "Theta Sigma", "url": "https://thetasigma.io/" },
+  "license": {
+    "name": "GPL-3.0-or-later",
+    "url": "https://github.com/thetedotgg/homeproxy/blob/main/LICENSE",
+    "label": { "cs": "GNU GPL 3.0 nebo novější", "en": "GNU GPL 3.0 or later" }
+  },
+  "donate": {
+    "enabled": true,
+    "url": "https://github.com/sponsors/thetedotgg",
+    "label": { "cs": "Podpořit přes GitHub Sponsors", "en": "Sponsor on GitHub" },
+    "more": [
+      { "id": "ko-fi", "url": null, "label": { "cs": "Ko-fi", "en": "Ko-fi" }, "locales": ["cs", "en"] }
+    ],
+    "czechQr": {
+      "enabled": false,
+      "image": "src/donate/qr-platba.png",
+      "account": null
+    }
+  }
+}

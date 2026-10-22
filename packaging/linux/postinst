@@ -1,0 +1,45 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = configure ]; then
+    if ! getent group homeproxy-admin >/dev/null; then
+        addgroup --system homeproxy-admin
+    fi
+    if getent passwd homeproxy >/dev/null; then
+        if [ "$(id -gn homeproxy)" != homeproxy-admin ] || \
+           [ "$(getent passwd homeproxy | cut -d: -f6)" != /var/lib/homeproxy ] || \
+           [ "$(getent passwd homeproxy | cut -d: -f7)" != /usr/sbin/nologin ]; then
+            echo 'Existing homeproxy account conflicts with the service identity' >&2
+            exit 1
+        fi
+    else
+        adduser --system --ingroup homeproxy-admin --home /var/lib/homeproxy \
+            --no-create-home --shell /usr/sbin/nologin homeproxy
+    fi
+    if command -v systemctl >/dev/null 2>&1; then
+        systemctl daemon-reload || true
+    fi
+    if command -v deb-systemd-helper >/dev/null 2>&1; then
+        # Remove only a mask created by our postrm; preserve an administrator's mask.
+        deb-systemd-helper unmask homeproxy.service >/dev/null || true
+        # was-enabled defaults to true on first installation. On upgrade, keep
+        # an administrator-disabled unit disabled while tracking package links.
+        if deb-systemd-helper --quiet was-enabled homeproxy.service; then
+            deb-systemd-helper enable homeproxy.service >/dev/null || true
+        else
+            deb-systemd-helper update-state homeproxy.service >/dev/null || true
+        fi
+    fi
+    if command -v deb-systemd-invoke >/dev/null 2>&1; then
+        if [ -n "$2" ]; then
+            # A remove/reinstall also supplies the previous version. restart
+            # starts an enabled unit in that case; the Debian helper preserves
+            # an administrator-disabled, inactive unit and policy-rc.d decisions.
+            deb-systemd-invoke restart homeproxy.service || true
+        else
+            deb-systemd-invoke start homeproxy.service || true
+        fi
+    fi
+fi
+
+exit 0

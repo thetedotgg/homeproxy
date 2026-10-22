@@ -1,0 +1,51 @@
+[package]
+name = "homeproxy-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[features]
+isolated-test = []
+
+[dependencies]
+hickory-resolver = { version = "0.26.3", default-features = false, features = ["tokio", "https-ring", "webpki-roots"] }
+bytes = "1.12.1"
+hex = "0.4.3"
+hmac = "0.13.0"
+http = "1.5.0"
+http-body-util = "0.1.5"
+httpdate = "1.0.3"
+hyper = { version = "1.11.1", features = ["client", "http1", "server"] }
+hyper-util = { version = "0.1.20", features = ["tokio"] }
+if-addrs = "0.15.0"
+image = { version = "0.25.10", default-features = false, features = ["jpeg", "png", "webp"] }
+md-5 = "0.11.0"
+rand = "0.10.2"
+rcgen = { version = "0.14.10", default-features = false, features = ["ring", "zeroize"] }
+rustls = { version = "0.23.45", default-features = false, features = ["ring", "std", "tls12"] }
+rustls-native-certs = "0.8.4"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+sha2 = "0.11.0"
+socket2 = { version = "0.6.5", features = ["all"] }
+subtle = "2.6.1"
+tempfile = "3.27.0"
+thiserror = "2.0.20"
+time = { version = "0.3.55", default-features = false, features = ["std"] }
+tokio = { version = "1.53.1", features = ["fs", "io-util", "macros", "net", "rt-multi-thread", "sync", "time"] }
+tokio-rustls = { version = "0.26.4", default-features = false, features = ["ring", "tls12"] }
+tokio-util = { version = "0.7.19", features = ["rt"] }
+zeroize = "1.8.2"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2.189"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61.2", features = ["Win32_Foundation", "Win32_Security_Cryptography"] }
+
+[dev-dependencies]
+tokio = { version = "1.53.1", features = ["test-util"] }
+h2 = "0.4.19"
+tempfile = "3.27.0"

@@ -1,0 +1,43 @@
+name: Bug report / Chyba
+description: Something does not work as expected. / Něco nefunguje, jak má.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste proxy passwords, certificate keys or full private URLs. Security issues go to SECURITY.md, not here.
+        Nevkládejte hesla proxy, klíče certifikátů ani úplné soukromé adresy. Bezpečnostní chyby hlaste podle SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: HomeProxy version / Verze
+      placeholder: "1.2.8"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Computer running HomeProxy / Počítač s HomeProxy
+      options: [Windows 11, Windows 10, Ubuntu Desktop, Ubuntu Server, Other / Jiný]
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: Affected device and app / Dotčené zařízení a aplikace
+      placeholder: "Android 15, Chrome · Android TV, YouTube · Windows laptop, Firefox"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened and what you expected / Co se stalo a co jste čekali
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Postup
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics / Diagnostika
+      description: Optional. Home → Diagnostics and recovery → Export diagnostics; check the file before attaching it. / Volitelné. Domov → Diagnostika a obnova → Exportovat diagnostiku; soubor před přiložením zkontrolujte.

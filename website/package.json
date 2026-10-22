@@ -1,0 +1,18 @@
+{
+  "name": "homeproxy-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:production": "node scripts/build.mjs --production",
+    "check": "node --check scripts/build.mjs && node --test scripts/*.test.mjs",
+    "images": "node scripts/images.mjs",
+    "og": "node scripts/og.mjs",
+    "preview": "node scripts/preview.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.34.5"
+  }
+}

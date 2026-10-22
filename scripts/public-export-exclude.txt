@@ -1,0 +1,22 @@
+# Paths left out of the public source export (scripts/export-public-repo.sh).
+# Internal QA evidence, agent workspaces, mockups with household names and
+# dated handover notes stay in the private archive. One path per line,
+# relative to the repository root; directories end with a slash.
+.agents/
+.codex/
+AGENTS.md
+proofs/
+provenance/
+sketches/
+tools/
+docs/cache-controls-decisions.md
+docs/cache-controls-verification.md
+docs/incident-20261008.md
+docs/smarttube-play-data-savings.md
+docs/technical-analysis.md
+docs/ubuntu-implementation.md
+docs/ubuntu-migration-analysis.md
+docs/ubuntu-preview-1.1.4.md
+docs/ubuntu-qa-20260929.md
+docs/ubuntu-release-1.1.5.md
+docs/wingate-squid-feature-analysis.md
